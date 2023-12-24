@@ -1,0 +1,383 @@
+
+
+body {
+    background-color: #B8B8D1;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mainBorder{
+    position: absolute;
+    top: 7.7%;
+    left: 20%;
+    width: 60%;
+    height: 85%;
+    background-color: #FFFFFB;
+    border-radius: 75px;
+    z-index: 2;
+    box-shadow: 0 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.main {
+    position: absolute;
+    top: 18%;
+    left: 8%;
+    width: 84%;
+    height: 70%;
+    background-color: #5b5f97;
+    border-radius: 75px;
+    z-index: 1;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 25px;
+    color: #5b5f97;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 40px ;
+
+}
+
+th, td {
+    height: 30px;
+    padding: 8px;
+    text-align: left;
+
+}
+
+
+td {
+    border-bottom: 20px solid #5b5f97;
+    border-radius: 25px;
+}
+
+.last {
+    border-bottom: 0;
+}
+
+th {
+    background-color: #5b5f97;
+}
+
+td:nth-child(even) {
+    border-radius: 0 25px 25px 0;
+}
+
+td:nth-child(odd) {
+    border-radius: 25px 0 0 25px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #B8B8D1;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFB;
+}
+
+.icons {
+    color: #5b5f97;
+    padding-left: 20px;
+    font-size: 30px;
+}
+
+/* NAVBAR */
+header {
+    background-color: #5b5f97;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7.5%;
+    border-bottom: black 2px solid;
+}
+
+.navbar {
+    margin: auto;
+
+}
+
+.ulFromNavbar {
+    list-style-type: none;
+    height: 5vh;
+    width: auto;
+
+
+}
+
+.liFromNavbar {
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 24%;
+    margin-right: 0.5vw;
+    border-radius: 250px;
+    border: black 2px solid;
+
+}
+
+.liFromNavbar a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+
+.liFromNavbar a:hover {
+    border-radius: 250px;
+    background: radial-gradient(circle, #cc4d50, #ff6b6c);
+    box-shadow: 0 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.liFromNavbar.terugNaarHoofdpagina a:hover {
+    position: relative;
+    color: transparent;
+}
+
+.liFromNavbar.terugNaarHoofdpagina a:hover:after {
+    content: '\2190';
+    margin-left: 5px;
+    display: inline-block;
+    color: black;
+    position: absolute;
+}
+
+h1 {
+    padding-left: 20px;
+    font-size: 70px;
+}
+
+.noTable {
+    display: none;
+}
+
+.images {
+    display: block;
+    margin: auto;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    max-width: 20%;
+    height: auto;
+    border-radius: 25px;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+}
+
+.images:hover{
+    box-shadow: 0 15px 30px rgba(0,0,0,1);
+}
+
+.images:active{
+    box-shadow: none;
+    border: 5px solid black;
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+
+    .ulFromNavbar {
+        padding-left: 10px;
+    }
+
+    .liFromNavbar a {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .liFromNavbar a {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    .section-content > ul > li{
+        font-size: 25px;
+    }
+
+
+    .ulFromNavbar {
+        padding-left: 5px;
+    }
+
+    .liFromNavbar a {
+        font-size: 35px;
+    }
+
+    .liFromNavbar:not(.terugNaarHoofdpagina) {
+        display: none;
+    }
+
+    .terugNaarHoofdpagina {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    .liFromNavbar a {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .section-content > ul > li{
+        font-size: 20px;
+    }
+
+
+    .mainBorder{
+
+        visibility: collapse;
+    }
+
+    .main {
+        visibility: visible;
+        position: absolute;
+        top: 7.7%;
+        left: 0;
+        width: 150%;
+        transform: translateX(-50px);
+        height: 85%;
+
+
+    }
+
+    .section{
+        height: 68vh;
+        scroll-snap-align: start;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    h1{
+        text-align: center;
+
+    }
+
+    table {
+        display: none;
+    }
+
+    .noTable {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px; /* Add margin as needed */
+    }
+
+    .icon,
+    .beschrijving {
+        color: #ff6b6c;
+        font-size: 25px;
+        text-align: center; /* Center text within the icon and beschrijving */
+    }
+
+    .icons {
+        color: #FFFFFB;
+        font-size: 30px; /* Adjust icon size as needed */
+    }
+
+    .beschrijving a {
+        color: #ff6b6c; /* Add the desired color for the link */
+        text-decoration: underline; /* Add underline or any other decoration as needed */
+    }
+
+    .images {
+        max-width: 50%;
+        display: block;
+        margin: auto;
+        border-radius: 25px;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .section-content > ul > li{
+        font-size: 15px;
+    }
+
+
+    .main {
+        transform: translateX(-60px);
+        width: 145%;
+    }
+
+    .liFromNavbar{
+        height: 80%;
+    }
+
+    .liFromNavbar a {
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    .main {
+        transform: translateX(-30px);
+        width: 130%;
+    }
+}
+
+@media only screen and (max-width: 260px) {
+    .liFromNavbar a {
+        font-size: 15px;
+    }
+
+    .main {
+        transform: translateX(-20px);
+    }
+}
