@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         window.location.href = 'Contactgegevens.html';
                         break;
                     case 'Page 4':
-                        window.location.href = 'Portfolio.html';
+                        window.location.href = 'portfolioRouterPage.html';
                         break;
                 }
             }
